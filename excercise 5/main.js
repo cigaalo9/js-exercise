@@ -1,25 +1,7 @@
-// const add= (a, b) => {
-//     return a + b;
-// }
-// console.log(add(51, 10));
-// console.log(add(-30, 71));
-// console.log(add(1, 10));
-
-let message = "Hello from the global scope!";
-
-function showMessage() {
-  let message = "Hello from the local scope!";
-
-  console.log(message);
-}
-
-showMessage();
-
-console.log(message);
-
+const  add = (a,b)=>
 {
-  let blockMessage = "Hello from inside the block!";
-  console.log(blockMessage);
+    console.log(a+b)
 }
-
-console.log(blockMessage); 
+add(3,3)
+add(3,2)
+add(3,9)
