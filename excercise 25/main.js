@@ -1,7 +1,6 @@
-let i=5
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
 
-while(i>0)
-{
-    console.log(i)
-    i--
-}
+const combinedArray = [...arr1, ...arr2];
+
+console.log(combinedArray); 
