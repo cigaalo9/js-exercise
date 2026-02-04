@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 1000;
+    }
+
+    .brand-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .navbar-links ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .navbar-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .navbar-links a:hover {
+      color: #ff9800;
+    }
+
+    /* HAMBURGER */
+    .toggle-button {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .toggle-button span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* X ANIMATION */
+    .toggle-button.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .toggle-button.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .toggle-button.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* SECTIONS */
+    .section {
+      height: 100vh;
+      padding-top: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    #home {
+      background: #f57c00;
+    }
+    #about {
+      background: #1976d2;
+    }
+    #services {
+      background: #388e3c;
+    }
+    #portfolio {
+      background: #6a1b9a;
+    }
+    #blog {
+      background: #455a64;
+    }
+    #careers {
+      background: #5d4037;
+    }
+    #contact {
+      background: #c62828;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .toggle-button {
+        display: flex;
+        margin-left: auto;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+      }
+
+      .navbar-links {
+        display: none;
+        width: 100%;
+      }
+
+      .navbar-links ul {
+        flex-direction: column;
+        margin-top: 15px;
+      }
+
+      .navbar-links li {
+        padding: 10px 0;
+      }
+
+      .navbar-links.active {
+        display: block;
+      }
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <div class="brand-title">My Website</div>
+
+      <div class="toggle-button" id="toggleBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="navbar-links" id="navbarLinks">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="home" class="section">Home Section</section>
+    <section id="about" class="section">About Section</section>
+    <section id="services" class="section">Services Section</section>
+    <section id="portfolio" class="section">Portfolio Section</section>
+    <section id="blog" class="section">Blog Section</section>
+    <section id="careers" class="section">Careers Section</section>
+    <section id="contact" class="section">Contact Section</section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

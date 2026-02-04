@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Blog</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      h2 {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .blog-container {
+        background-color: #fff;
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Form */
+      #blog-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      #blog-form input,
+      #blog-form textarea {
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      #blog-form textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      #blog-form button {
+        padding: 12px;
+        font-size: 16px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      #blog-form button:hover {
+        background-color: #555;
+      }
+
+      /* Posts */
+      #posts {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .post {
+        background-color: #eee;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      .post h3 {
+        margin-top: 0;
+      }
+
+      .post img {
+        max-width: 100%;
+        margin: 10px 0;
+        border-radius: 4px;
+      }
+
+      /* Post actions */
+      .post-actions {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .edit-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .edit-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .delete-btn {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .delete-btn:hover {
+        background-color: #b02a37;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Exercise 37</h2>
+
+    <div class="blog-container">
+      <h1>Simple Blog</h1>
+
+      <h2>Create a New Post</h2>
+
+      <div id="blog-form">
+        <input id="title" type="text" placeholder="Post Title" />
+        <input id="image" type="text" placeholder="Image URL (optional)" />
+        <textarea id="content" placeholder="Write your post here..."></textarea>
+        <button id="addPost" type="button">Add Post</button>
+      </div>
+
+      <h2>All Posts</h2>
+      <div id="posts"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
